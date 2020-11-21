@@ -1,0 +1,374 @@
+html,body {
+    height: 100%;
+    background-image: url("./assets/bgTitle.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Main header */
+#main-header {
+    display: block;
+}
+
+/* Title */
+#title {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    color: gold;
+    text-shadow: 5px 5px 10px black;
+    margin-left: 90px;
+    animation: blink 10s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+        color: silver;
+    }
+
+    25% {
+        opacity: 0.5;
+        color: gold;
+    }
+
+    50% {
+        opacity: 1;
+        color: silver;
+    }
+
+    75% {
+        opacity: 0.5;
+        color: gold;
+    }
+
+    100% {
+        opacity: 0;
+        color: silver;
+    }
+}
+
+.col-md-1:first-child{
+    margin-left: 50px;
+}
+
+/* Navbar */
+nav {
+    background-color: gold;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px white;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bolder;
+}
+
+/* Search Button */
+#searchButton {
+    color: gold;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+#searchButton:hover {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+input {
+    text-align: center;
+}
+
+/* Card */
+#allCoins {
+    display: inline-table;
+    margin: 10px 27px 0px 25px;
+    text-align: center;
+    vertical-align: top;
+    width: 200px;
+    height: 210px;
+    border: 2px outset black;
+    border-radius: 20%;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#allCoins:hover {
+    box-shadow: 3px 3px 4px black;
+    background-image: url("./assets/coinsHover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    font-weight: 900;
+    text-shadow: 3px 3px 3px black;
+}
+
+.card-text:nth-child(1)::before {
+    color: gold;
+    text-shadow: 1px 1px black;
+    content: "Symbol:";
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
+.card-text:nth-child(2)::before {
+    color: gold;
+    text-shadow: 1px 1px black;
+    content: "Name:";
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
+.moreInfoBtn {
+    color: black;
+    font-weight: bold;
+    border: 1px dashed black;
+}
+
+.moreInfoBtn:hover {
+    color: gold;
+    background-color: black;
+    font-weight: bold;
+    border: 1px dashed gold;
+}
+
+/* More info button data */
+#infoBtn {
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: underline;
+}
+
+/* progress bar */
+#progress {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    margin-left: 42%;
+    border-radius: 50%;
+    border: 2px double gold;
+}
+
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+
+@keyframes spinner {
+    from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+
+    }
+}
+
+/* Toggle Button */
+.custom-switch .custom-control-label::after {
+    background-color: black;
+    top: calc(.25rem + 2.4px);
+}
+
+.custom-switch .custom-control-label::before {
+    border: 1px solid black;
+    background-color: gold;
+    box-sizing: content-box;
+}
+
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+    background-color: white;
+}
+
+/* Modal */
+.modal-title {
+    margin: auto;
+    color: gold;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: black;
+    text-shadow: 1px 1px 4px black;
+}
+
+.modal-header {
+    display: contents;
+}
+
+.modal-body {
+    text-align: center;
+    padding: 0;
+    background-image: url("./assets/modalBg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal-terms {
+    display: table-cell;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    background-color: gold;
+    width: 65%;
+    margin: 4px 0 0 80px;
+}
+
+.modal-footer {
+    margin: auto;
+    display: contents;
+}
+
+input[type="checkbox"] {
+    display: block;
+    margin: auto;
+    width: 22px;
+    height: 22px;
+}
+
+#modalText {
+    color: black;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 0 1px white, -1px 0 white, -1px 2px white, -2px 1px white, -2px 3px white, -3px 2px white, -3px 4px white, -4px 3px white, -4px 5px gold, -5px 4px gold, -5px 6px gold, -6px 5px gold;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+/* About Me page */
+.aboutMe-section {
+    padding-top: 14px;
+}
+
+.aboutMe-title {
+    text-align: center;
+    font-size: 30px;
+    padding: 0 0 11px;
+    position: relative;
+    color: gold;
+    text-shadow: 0 1px white, -1px 0 white, -1px 2px white, -2px 1px white, -3px 4px black, -4px 3px black, -4px 5px black, -5px 4px black, -5px 6px black, -6px 5px black;
+    font-weight: 900;
+}
+
+.aboutMe-text {
+    color: #000000;
+    text-shadow: 2px 2px white;
+    font-size: 23px;
+    margin: 0 0 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#aboutMe {
+    border-radius: 30%;
+    border-style: groove;
+    margin-left: 42px;
+}
+
+.feature .feature-box .feature-content {
+    text-align: center;
+    visibility: hidden;
+}
+
+.feature .feature-box .feature-content h4 {
+    color: white;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px black, 0 0 5px black;
+    font-size: 24px;
+    line-height: 22px;
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.feature .feature-box .feature-content p {
+    color: black;
+    font-size: 18px;
+    line-height: 19px;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px white;
+}
+
+/* Report page */
+#chartContainer {
+    width: 100%;
+    height: 500px
+}
+
+a.canvasjs-chart-credit {
+    display: none;
+}
+
+/* Report Empty + Active Empty*/
+#emptyChart,
+#emptyCoins {
+    font-size: 80px;
+    color: black;
+    text-align: center;
+    font-family: fantasy;
+    height: 500px;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+    background-image: url("./assets/emptyPage.gif");
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+/* Search + Active coins titles */
+#activeCoinsTitle,
+#searchTitle{
+    font-size: 80px;
+    color: black;
+    text-align: center;
+    font-family: fantasy;
+    text-shadow: 1px 0px 1px white, 0px 1px 1px white, 2px 1px 1px white, 1px 2px 1px white, 3px 2px 1px white, 2px 3px 1px white, 4px 3px 1px white, 3px 4px 1px white, 5px 4px 1px white, 4px 5px 1px black, 6px 5px 1px black, 5px 6px 1px black, 7px 6px 1px black;
+}
+
+/* Active Coins */
+#activeCoins{
+    color: greenyellow;
+    border: 1px solid black;
+    font-weight: bold;
+}
+#activeCoins:hover{
+    color: black;
+    background-color: gold;
+    border: 1px solid black;
+    font-weight: bold;
+}

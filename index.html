@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery+Ajax project</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="navbar-brand">My Coins</div>
+        <div class="collapse navbar-collapse ml-3">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="homePage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="reportPage">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" id="aboutPage">About</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" id="inputValue" placeholder="Search Coin"
+                    aria-label="Search">
+                <button class="btn btn-secondary mr-3" type="button" id="searchButton">Search</button>
+                <button class="btn btn-secondary " type="button" id="activeCoins">Active Coins</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Title and images -->
+    <div class="container" id="main-header">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="./assets/coinsRight.png" height="150px" alt="coins">
+            </div>
+            <div class="col-md-1">
+                <img src="./assets/coinsLeft.png" height="120px" alt="coins">
+            </div>
+            <div class="col-md-5">
+                <h1 id="title">Coins</h1>
+            </div>
+            <div class="col-md-2">
+                <img src="./assets/coinsLeft.png" height="120px" alt="coins">
+            </div>
+            <div class="col-md-2">
+                <img src="./assets/coinsRight.png" height="150px" alt="coins">
+            </div>
+        </div>
+    </div>
+    <!-- All coins card -->
+    <div id="showAll"></div>
+    <!-- progress bar -->
+    <img id="progress" src="./assets/progressBar.jpg" height="200px"/>
+    <!-- modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="myModalLabel">Change Coins</h3>
+                    <p class="modal-terms">You can change coins on Real Time</p>
+                    <p class="modal-terms">Maximum Coins on your list its 5</p>
+                </div>
+                <div class="modal-body">
+                    <p id="modalText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="modalClose()">Close</button>
+                    <button type="button" class="btn btn-success" onclick="modalSave()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Jquery -->
+    <script src="jquery-3.4.1.js"></script>
+    <!-- Canvas Js -->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- javascript -->
+    <script src="main.js"></script>
+    <script src="./javascript/home.js"></script>
+    <script src="./javascript/reports.js"></script>
+    <script src="./javascript/about.js"></script>
+
+</body>
+</html>
